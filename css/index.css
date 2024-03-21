@@ -115,6 +115,17 @@ body{
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgb(134, 134, 134);
 }
+.imgPrincipal:hover{
+    transform: scale(1.03);
+    transition: transform 0.4s ease-in-out;
+}
+.containerPrincipalImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 60%;
+}
 .imgPrincipal img{
     width: 31.6vw;
     height: 100%;
@@ -170,3 +181,83 @@ span{
 }
 
 
+
+@media (width <=800px){
+    .productContainer, 
+    .productContainer2, 
+    .productContainer3,
+    .productContainer4,
+    .productContainer5{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vh;
+    border: 2px solid black;
+    width: 85vw;
+    height: 80vh;
+}
+.containerPrincipalImg{
+    width: 100%;
+    height: 50%;
+    margin-right: 2%;    
+}
+.containerImgs{
+    display: flex;
+    border: 1px solid black;
+    width: 20%;
+    height: 95%;
+}
+.img1{
+    border: 1px solid black;
+    width: 65%;
+    height: 17%;
+}
+.img1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.imgPrincipal{
+    margin-left: 2%;
+    border: 3px solid black;
+    height: 95%;
+    width: 70%;
+    box-shadow: 5px 5px 10px rgb(134, 134, 134);
+    border: 1px solid black;
+}
+.imgPrincipal img{
+    width: 100%;
+    height: 100%;
+}
+
+.contenido{
+    margin-top: 2%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 15%;
+    height: 45%;
+    width: 100%;
+}
+
+.contenido h1{
+    text-align: left;  
+    font-size: 1.4rem;
+}
+.contenido p{
+    width: 70%;
+    text-align: start;
+    font-size: 0.7rem;
+}
+.contenido h3{
+    font-size: 1.1rem;
+}
+.contenido button{
+    margin-top: 2%;
+    width: 21%;
+    height: 4vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 0.8rem;
+}
+
+}
