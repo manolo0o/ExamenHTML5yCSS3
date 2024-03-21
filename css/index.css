@@ -34,6 +34,12 @@ body{
     display: flex;
     align-items: center;
 }
+.item_1 .menuPP{
+    display: none;
+}
+.item_1 .menuP{
+    display: none;
+} 
 .menu li {
     display: inline;
     list-style: none;
@@ -183,6 +189,62 @@ span{
 
 
 @media (width <=800px){
+    .item_1{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .menu{
+        height: 100%;
+    }
+    .header{
+        display: flex;
+    }
+    .item_1 .list_icon{
+        color: black;
+        cursor: pointer;
+    }
+    .item_1 .menuPP{
+        display: none;
+        
+    }
+    .item_1 .menuP{
+        display: flex;
+
+    }
+    .item_1 .ul_links{
+        
+        width: 100%;
+        gap: 2rem;
+        border-radius: 10px;
+        background-color: rgb(11, 105, 11) ;
+        position: absolute;
+        top: 9% ;
+        left: 0;
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        transition: all .3s;
+    }
+
+    .menuPP:checked + .ul_links {
+        height: 50% ;
+        border: 2px solid black;
+        padding: 2%;
+    }
+    .menu a{
+        font-size: 2em;
+        color: white;
+        border: none;
+        box-shadow: none;
+    }
+    .menu a:hover{
+        color: rgba(0, 0, 0, 0.911);
+    }
+    
     .productContainer, 
     .productContainer2, 
     .productContainer3,
@@ -195,6 +257,7 @@ span{
     width: 85vw;
     height: 80vh;
 }
+
 .containerPrincipalImg{
     width: 100%;
     height: 50%;
