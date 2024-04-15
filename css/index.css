@@ -20,22 +20,46 @@ body{
     align-items: center;
 }
 
-
 .item_1{
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(11, 105, 11);
 }
 .item_1 .header{
     margin-top: 1vh;
-    width: 100%;
+    width: 92%;
+    border-radius: 10px;
 }
 .item_1 .menu{
-    height: 8vh;
+    height: 10vh;
     display: flex;
     align-items: center;
 }
+.menu a{
+    margin-left: 4vw;
+    padding: 0.8vw;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.8vw;
+}
+.menu a:hover{    
+    color: rgb(201, 201, 201);
+    transform: scale(1.10);
+    transition: transform 0.4s ease-in-out;
+}
 .item_1 .menuPP{
     display: none;
+}
+.menu-container{
+    overflow-x: auto; /* Agrega scroll horizontal cuando se desborde */
+    white-space: nowrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .item_1 .menuP{
     display: none;
@@ -44,24 +68,18 @@ body{
     display: inline;
     list-style: none;
 }
-.menu a{
-    margin-left: 3vw;
-    padding: 0.8vw;
-    padding-bottom: 1vw;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    list-style: none;
-    font-size: 2vw;
-    border: 3px solid black;
-    border-radius: 10px;
-    background-color: rgb(11, 105, 11);
-    box-shadow: 5px 5px 10px rgb(134, 134, 134);
-
+.item_1 .iconCart{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.menu a:hover{    
+.item_1 .iconCart a{
+    font-size: 2.5vw;
     color: white;
-    background-color: rgba(11, 105, 11, 0.74) ;
+}
+.item_1 .iconCart a:hover{
+    color: rgb(201, 201, 201);
     transform: scale(1.10);
     transition: transform 0.4s ease-in-out;
 }
@@ -188,11 +206,13 @@ span{
 
 
 
+
+
 @media (width <=800px){
     .item_1{
         width: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
     }
     .menu{
         height: 100%;
@@ -201,8 +221,12 @@ span{
         display: flex;
     }
     .item_1 .list_icon{
-        color: black;
+        margin-left: 5vw;
+        color: white;
         cursor: pointer;
+    }
+    .item_1 .list_icon:hover{
+        color: rgb(201, 201, 201);
     }
     .item_1 .menuPP{
         display: none;
@@ -213,36 +237,45 @@ span{
 
     }
     .item_1 .ul_links{
-        
         width: 100%;
         gap: 2rem;
-        border-radius: 10px;
+        border-radius: 5px;
         background-color: rgb(11, 105, 11) ;
         position: absolute;
-        top: 9% ;
+        top: 8% ;
         left: 0;
         height: 0;
         overflow: hidden;
+        overflow-y: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         transition: all .3s;
     }
 
     .menuPP:checked + .ul_links {
-        height: 50% ;
+        height: 55% ;
         border: 2px solid black;
+        border-top: none;
         padding: 2%;
     }
     .menu a{
-        font-size: 2em;
+        font-size: 1.8em;
         color: white;
         border: none;
         box-shadow: none;
     }
     .menu a:hover{
-        color: rgba(0, 0, 0, 0.911);
+        color: rgb(201, 201, 201);
+    }
+    .item_1 .iconCart{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 3vw;
+    }
+    .item_1 .iconCart a{
+        font-size: 2rem;
     }
     
     .productContainer, 
@@ -256,71 +289,88 @@ span{
     border: 2px solid black;
     width: 85vw;
     height: 80vh;
+    }
+
+    .containerPrincipalImg{
+        width: 100%;
+        height: 50%;
+        margin-right: 2%;    
+    }
+    .containerImgs{
+        display: flex;
+        border: 1px solid black;
+        width: 20%;
+        height: 95%;
+    }
+    .img1{
+        border: 1px solid black;
+        width: 65%;
+        height: 17%;
+    }
+    .img1 img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .imgPrincipal{
+        margin-left: 2%;
+        border: 3px solid black;
+        height: 95%;
+        width: 70%;
+        box-shadow: 5px 5px 10px rgb(134, 134, 134);
+        border: 1px solid black;
+    }
+    .imgPrincipal img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .contenido{
+        margin-top: 2%;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        margin-left: 15%;
+        height: 45%;
+        width: 100%;
+    }
+
+    .contenido h1{
+        text-align: left;  
+        font-size: 1.4rem;
+    }
+    .contenido p{
+        width: 70%;
+        text-align: start;
+        font-size: 0.7rem;
+    }
+    .contenido h3{
+        font-size: 1.1rem;
+    }
+    .contenido button{
+        margin-top: 2%;
+        width: 21%;
+        height: 4vh;
+        border-radius: 10px;
+        border: 1px solid black;
+        font-size: 0.8rem;
+    }
+
 }
 
-.containerPrincipalImg{
-    width: 100%;
-    height: 50%;
-    margin-right: 2%;    
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; 
 }
-.containerImgs{
-    display: flex;
-    border: 1px solid black;
-    width: 20%;
-    height: 95%;
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
 }
-.img1{
-    border: 1px solid black;
-    width: 65%;
-    height: 17%;
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
 }
-.img1 img{
-    width: 100%;
-    height: 100%;
-}
-
-.imgPrincipal{
-    margin-left: 2%;
-    border: 3px solid black;
-    height: 95%;
-    width: 70%;
-    box-shadow: 5px 5px 10px rgb(134, 134, 134);
-    border: 1px solid black;
-}
-.imgPrincipal img{
-    width: 100%;
-    height: 100%;
-}
-
-.contenido{
-    margin-top: 2%;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    margin-left: 15%;
-    height: 45%;
-    width: 100%;
-}
-
-.contenido h1{
-    text-align: left;  
-    font-size: 1.4rem;
-}
-.contenido p{
-    width: 70%;
-    text-align: start;
-    font-size: 0.7rem;
-}
-.contenido h3{
-    font-size: 1.1rem;
-}
-.contenido button{
-    margin-top: 2%;
-    width: 21%;
-    height: 4vh;
-    border-radius: 10px;
-    border: 1px solid black;
-    font-size: 0.8rem;
-}
-
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    border-radius: 5px;
 }
